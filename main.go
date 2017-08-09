@@ -36,7 +36,12 @@ func extract(html string) string {
 	result = regexp.MustCompile("\n").ReplaceAllString(html, "")
 	for k, v := range extractRegexp.SubexpNames() {
 		if v == "result" {
-			result = extractRegexp.FindStringSubmatch(result)[k]
+			if sub := extractRegexp.FindStringSubmatch(result); sub != nil && len(sub) > k {
+				result = sub[k]
+			} else {
+				result = "No result"
+				break
+			}
 		}
 	}
 
