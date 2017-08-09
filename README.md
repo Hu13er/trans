@@ -1,7 +1,6 @@
 ## Translate
 
-Use [fastdic](fastdic.com) website to translate words to persion.
-
+Use [fastdic](https://fastdic.com) website to translate words to persion.
 
 ### Install
 
@@ -14,5 +13,3 @@ $ go get github.com/Hu13er/trans
 ```bash
 $ trans <statement>
 ```
-
-[sdf](sdfsdf)
